@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Notice Board</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>College Notice Board</h1>
+
+    <!-- Admin login: only the admin can delete notices -->
+    <div class="admin-bar">
+      <form id="loginForm">
+        <input type="password" id="password" placeholder="Admin PIN" required>
+        <button type="submit">Admin Login</button>
+      </form>
+      <div id="adminInfo" hidden>
+        <span>Logged in as Admin</span>
+        <button id="logoutBtn" type="button">Logout</button>
+      </div>
+    </div>
+
+    <!-- Form: used to add a new notice -->
+    <form id="noticeForm">
+      <input type="text" id="title" placeholder="Notice title" required>
+
+      <div class="row">
+        <select id="category">
+          <option>Exam</option>
+          <option>Event</option>
+          <option>Holiday</option>
+          <option>General</option>
+        </select>
+        <input type="date" id="date" required>
+      </div>
+
+      <textarea id="description" placeholder="Notice description" rows="3" required></textarea>
+      <button type="submit">Post Notice</button>
+    </form>
+
+    <!-- Filter: show notices of one category only -->
+    <div class="filter">
+      <label for="filter">Show:</label>
+      <select id="filter">
+        <option>All</option>
+        <option>Exam</option>
+        <option>Event</option>
+        <option>Holiday</option>
+        <option>General</option>
+      </select>
+    </div>
+
+    <!-- Empty container; JavaScript fills it with notice cards -->
+    <div id="noticeList"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
