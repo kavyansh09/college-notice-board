@@ -68,3 +68,5 @@ Notices are saved only in the current browser's `localStorage`. They are not sha
 ## Author
 
 Kavyansh Gupta
+
+<!-- Documentation marker: no runtime effect. -->
