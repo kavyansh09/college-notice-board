@@ -1,5 +1,6 @@
 // STEP 1: Load saved notices from localStorage (or start with an empty array)
 // Initialization marker: no runtime effect.
+// State marker: no runtime effect.
 let notices = JSON.parse(localStorage.getItem("notices")) || [];
 
 // Get the elements we need from the page
